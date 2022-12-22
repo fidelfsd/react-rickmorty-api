@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { characterService } from "../../services/characterService";
+import { RickMortyService } from "../../services/RickMortyService";
 
 import { useParams } from "react-router-dom";
 
@@ -8,7 +8,7 @@ export function CharacterDetail() {
    const { id } = useParams();
 
    useEffect(() => {
-      characterService.getSingleCharacter(id).then((res) => {
+      RickMortyService.getSingleCharacter(id).then((res) => {
          setCharacter(res.data);
       });
    }, []);

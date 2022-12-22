@@ -1,32 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { characterService } from "../../services/characterService";
-import { useNavigate } from "react-router-dom";
+import { RickMortyService } from "../../services/RickMortyService";
+import "./CaractersList.scss";
+import Character from "../../components/Character/Character";
 
 export function CharactersList() {
+   // hooks
    const [characters, setCharacters] = useState([]);
 
-   const navigate = useNavigate();
-
    useEffect(() => {
-      characterService.getAllCharacters().then((res) => {
-         setCharacters(res.data.results);
-      });
+      getAllCharacters();
    }, []);
 
-   const selectCharacter = (character) => {
-      navigate(`/character/${character.id}`);
+   // functions
+   const getAllCharacters = async () => {
+      try {
+         const res = await RickMortyService.getAllCharacters();
+         setCharacters(res.data.results);
+      } catch (error) {
+         console.log(error.message || error);
+      }
    };
 
    return (
-      <div>
+      <div className="container">
          <h1>CharactersList</h1>
-
-         {characters.length > 0 &&
-            characters.map((char) => (
-               <div key={char.id} onClick={() => selectCharacter(char)}>
-                  {char.name}
-               </div>
-            ))}
+         <div className="characters-list">
+            {characters.length > 0 &&
+               characters.map((char) => (
+                  <Character key={char.id} character={char} />
+               ))}
+         </div>
       </div>
    );
 }

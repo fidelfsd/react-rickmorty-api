@@ -16,7 +16,7 @@ import {
 import { CharactersList } from "./containers/CharactersList/CharactersList";
 import { CharacterDetail } from "./containers/CharacterDetail/CharacterDetail";
 import { Header } from "./components/Header/Header";
-import { About } from "./components/About/About";
+import { About } from "./containers/About/About";
 
 function App() {
    return (
