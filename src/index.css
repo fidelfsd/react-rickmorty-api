@@ -32,6 +32,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   text-align: center;
+  background-color: var(--bs-light);
 }
 
 h1 {

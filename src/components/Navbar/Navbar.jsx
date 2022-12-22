@@ -31,8 +31,8 @@ export default function Navbar() {
             </ul>
          </nav> */}
 
-         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container">
+         <nav className="navbar navbar-expand-lg navbar-light bg-dark text-light">
+            <div className="container text-light">
                <a className="navbar-brand" href="/">
                   <img
                      className="logo"
