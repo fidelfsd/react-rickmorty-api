@@ -23,7 +23,7 @@ export function CharactersList() {
 
    return (
       <div className="container">
-         <h1>CharactersList</h1>
+         <h1 className="h1 mt-5 mb-5">CharactersList</h1>
          <div className="characters-list">
             {characters.length > 0 &&
                characters.map((char) => (

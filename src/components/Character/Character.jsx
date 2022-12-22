@@ -17,7 +17,7 @@ function Character({ character }) {
                <h5 className="card-title">{character.name}</h5>
                <button
                   onClick={() => selectCharacter(character)}
-                  className="btn btn-primary"
+                  className="btn btn-primary text-white"
                >
                   View more
                </button>

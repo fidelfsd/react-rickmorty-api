@@ -6,3 +6,8 @@
 .logo {
     margin-right: 0.5em;
 }
+
+.nav-link,
+.navbar-brand {
+    color: var(--bs-light) !important;
+}

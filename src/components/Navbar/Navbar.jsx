@@ -31,8 +31,8 @@ export default function Navbar() {
             </ul>
          </nav> */}
 
-         <nav className="navbar navbar-expand-lg navbar-light bg-dark text-light">
-            <div className="container text-light">
+         <nav className="navbar navbar-expand-lg navbar-light bg-dark ">
+            <div className="container">
                <a className="navbar-brand" href="/">
                   <img
                      className="logo"
@@ -60,7 +60,7 @@ export default function Navbar() {
                >
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                      <li className="nav-item">
-                        <NavLink to="/character" className="nav-link">
+                        <NavLink to="/character" className="nav-link" end>
                            Characters
                         </NavLink>
                      </li>

@@ -15,8 +15,9 @@ export function CharacterDetail() {
 
    return (
       <div>
-         <h1>CharacterDetail</h1>
+         <h1 className="h1 mt-5 mb-5">CharacterDetail</h1>
          <h2>id={id}</h2>
+         <img src={character.image} alt="" />
          <h2>{character.name}</h2>
          <p>{character.status}</p>
       </div>
